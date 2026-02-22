@@ -1,0 +1,283 @@
+/* ===== Quick-Add Modal (Light Theme) ===== */
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .35);
+    backdrop-filter: blur(6px);
+    z-index: 200;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    animation: backdropIn .2s ease both
+}
+
+@keyframes backdropIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.modal-card {
+    width: 100%;
+    max-width: 480px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, .08);
+    border-radius: 28px 28px 0 0;
+    padding: 32px 28px 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    animation: slideUp .3s cubic-bezier(.22, 1, .36, 1) both;
+    position: relative;
+    box-shadow: 0 -4px 40px rgba(0, 0, 0, .1)
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+/* Drag handle */
+.modal-card::before {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 4px;
+    border-radius: 99px;
+    background: rgba(0, 0, 0, .12)
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #f5f5f5;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    color: #555;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s
+}
+
+.modal-close:hover {
+    background: #eee;
+    color: #111;
+    transform: scale(1.08)
+}
+
+/* Top */
+.modal-top {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-top: 8px
+}
+
+.modal-art {
+    width: 64px;
+    height: 64px;
+    border-radius: 14px;
+    background: #f5f5f5;
+    border: 1px solid rgba(0, 0, 0, .06);
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden
+}
+
+.modal-art svg {
+    width: 100%;
+    height: 100%
+}
+
+.modal-meta {
+    flex: 1;
+    min-width: 0
+}
+
+.modal-product-tag {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 3px
+}
+
+.modal-product-name {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    color: #111;
+    letter-spacing: -.02em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.modal-product-price {
+    font-size: 13px;
+    color: #888;
+    margin-top: 2px
+}
+
+/* Section */
+.modal-section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 10px
+}
+
+/* Size chips */
+.modal-sizes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px
+}
+
+.modal-size-btn {
+    padding: 7px 18px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1.5px solid #ddd;
+    background: #fff;
+    color: #555;
+    transition: all .2s;
+    font-family: 'Inter', sans-serif
+}
+
+.modal-size-btn:hover {
+    border-color: #111;
+    color: #111;
+    background: #fff;
+    transform: translateY(-1px)
+}
+
+.modal-size-btn.selected {
+    background: #111;
+    border-color: #111;
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, .12)
+}
+
+/* Qty */
+.modal-qty-row {
+    display: flex;
+    align-items: center;
+    gap: 14px
+}
+
+.modal-qty-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1.5px solid #ddd;
+    background: #fff;
+    color: #111;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s;
+    line-height: 1
+}
+
+.modal-qty-btn:hover {
+    background: #f0f0f0;
+    border-color: #111;
+    transform: scale(1.06)
+}
+
+.modal-qty-btn:disabled {
+    opacity: .35;
+    cursor: not-allowed
+}
+
+.modal-qty-val {
+    font-family: 'Outfit', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    color: #111;
+    min-width: 32px;
+    text-align: center
+}
+
+/* CTA */
+.modal-add-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    background: #111;
+    color: #fff;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, .12);
+    transition: all .25s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px
+}
+
+.modal-add-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .18)
+}
+
+.modal-add-btn:active {
+    transform: scale(0.97)
+}
+
+.modal-size-hint {
+    font-size: 12px;
+    color: #f87171;
+    margin-top: -8px;
+    animation: hintShake .3s ease
+}
+
+@keyframes hintShake {
+
+    0%,
+    100% {
+        transform: translateX(0)
+    }
+
+    25% {
+        transform: translateX(-4px)
+    }
+
+    75% {
+        transform: translateX(4px)
+    }
+}

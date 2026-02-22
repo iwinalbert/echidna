@@ -1,0 +1,115 @@
+:root {
+  /* Surface Colors */
+  --bg-color: #ebebeb;
+  --bg-card: #fff;
+  --bg-art: linear-gradient(145deg, #f8f8f8, #f0f0f0);
+  --bg-art-2: #a5f3fc;
+  --bg-art-3: #f5d0fe;
+  --bg-glass: rgba(255, 255, 255, 0.85);
+
+  /* Border / Utility Colors */
+  --border-card: rgba(0, 0, 0, 0.06);
+  --border-hover: rgba(0, 0, 0, 0.1);
+
+  /* Text Colors */
+  --text-main: #111;
+  --text-sec: #555;
+  --text-muted-darker: #666;
+  --text-muted-dark: #888;
+  --text-muted: #999;
+  --text-muted-light: #aaa;
+  --text-placeholder: #bbb;
+  --text-on-dark: #fff;
+
+  /* Additional UI Colors */
+  --bg-card-hover: #fdfdfd;
+  --bg-art-wrap: #f5f5f5;
+  --border-dashed: #ccc;
+  --bg-overlay: rgba(0, 0, 0, 0.45);
+  --bg-dark: #111;
+  --border-dark: rgba(0, 0, 0, 0.15);
+  --border-on-dark: rgba(255, 255, 255, 0.2);
+  --bg-dark-alpha-50: rgba(0, 0, 0, 0.5);
+
+  /* Alphas */
+  --bg-card-alpha-03: rgba(0, 0, 0, 0.03);
+  --bg-card-alpha-04: rgba(0, 0, 0, 0.04);
+  --bg-card-alpha-05: rgba(0, 0, 0, 0.05);
+  --border-card-alpha-07: rgba(0, 0, 0, 0.07);
+  --border-card-alpha-08: rgba(0, 0, 0, 0.08);
+  --border-card-alpha-12: rgba(0, 0, 0, 0.12);
+  --border-card-alpha-15: rgba(0, 0, 0, 0.15);
+  --border-card-alpha-22: rgba(0, 0, 0, 0.22);
+  --bg-card-alpha-70: rgba(255, 255, 255, 0.7);
+  --shadow-focus: rgba(0, 0, 0, 0.06);
+
+  /* Feature Colors */
+  --primary-btn-bg: #111;
+  --primary-btn-text: #fff;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.13), 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+[data-theme='dark'] {
+  /* Surface Colors */
+  --bg-color: #050507;
+  --bg-card: #151515;
+  --bg-art: linear-gradient(145deg, #1c1c1c, #111);
+  --bg-art-2: #164e63;
+  --bg-art-3: #4a044e;
+  --bg-glass: rgba(10, 10, 15, 0.85);
+
+  /* Border / Utility Colors */
+  --border-card: rgba(255, 255, 255, 0.06);
+  --border-hover: rgba(255, 255, 255, 0.15);
+
+  /* Text Colors */
+  --text-main: #f0f0f0;
+  --text-sec: #a0a0a0;
+  --text-muted-darker: #b0b0b0;
+  --text-muted-dark: #909090;
+  --text-muted: #666;
+  --text-muted-light: #555;
+  --text-placeholder: #444;
+  --text-on-dark: #111;
+
+  /* Additional UI Colors */
+  --bg-card-hover: #1f1f1f;
+  --bg-art-wrap: #181818;
+  --border-dashed: #444;
+  --bg-overlay: rgba(0, 0, 0, 0.75);
+  --bg-dark: #fff;
+  --border-dark: rgba(255, 255, 255, 0.15);
+  --border-on-dark: rgba(0, 0, 0, 0.2);
+  --bg-dark-alpha-50: rgba(255, 255, 255, 0.5);
+
+  /* Alphas */
+  --bg-card-alpha-03: rgba(255, 255, 255, 0.03);
+  --bg-card-alpha-04: rgba(255, 255, 255, 0.04);
+  --bg-card-alpha-05: rgba(255, 255, 255, 0.05);
+  --border-card-alpha-07: rgba(255, 255, 255, 0.07);
+  --border-card-alpha-08: rgba(255, 255, 255, 0.08);
+  --border-card-alpha-12: rgba(255, 255, 255, 0.12);
+  --border-card-alpha-15: rgba(255, 255, 255, 0.15);
+  --border-card-alpha-22: rgba(255, 255, 255, 0.22);
+  --bg-card-alpha-70: rgba(0, 0, 0, 0.4);
+  --shadow-focus: rgba(255, 255, 255, 0.15);
+
+  /* Feature Colors */
+  --primary-btn-bg: #fff;
+  --primary-btn-text: #111;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5), 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Global styles if needed */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}

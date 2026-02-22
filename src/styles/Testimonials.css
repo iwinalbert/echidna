@@ -1,0 +1,346 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+.testimonials-container {
+    min-height: 100vh;
+    background: var(--bg-color);
+    font-family: 'Inter', sans-serif;
+    --font-heading: 'Outfit', 'Inter', sans-serif;
+    color: var(--text-main);
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    overflow-x: hidden
+}
+
+/* Ambient Orbs */
+.t-bg-orbs {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0
+}
+
+.t-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: .12
+}
+
+.t-orb-1 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, var(--bg-art), transparent 70%);
+    top: -100px;
+    left: -100px
+}
+
+.t-orb-2 {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, var(--bg-art-2), transparent 70%);
+    bottom: -80px;
+    right: -80px
+}
+
+.t-orb-3 {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, var(--bg-art-3), transparent 70%);
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+/* Header */
+.t-header {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28px 40px;
+    border-bottom: 1px solid var(--border-card);
+    background: var(--bg-glass);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+}
+
+.t-back-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    color: var(--text-sec);
+    border: 1.5px solid var(--border-card);
+    background: var(--bg-card);
+    transition: all .2s
+}
+
+.t-back-btn:hover {
+    color: var(--text-main);
+    border-color: var(--text-main);
+    background: var(--bg-card);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, .08)
+}
+
+.t-header-center {
+    text-align: center
+}
+
+.t-header-badge {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--text-muted-dark);
+    ;
+    margin-bottom: 6px
+}
+
+.t-header-title {
+    font-family: var(--font-heading);
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 800;
+    letter-spacing: -.025em;
+    color: var(--text-main)
+}
+
+.t-header-sub {
+    font-size: 13px;
+    color: var(--text-muted-dark);
+    ;
+    margin-top: 4px
+}
+
+.t-header-right {
+    width: 110px
+}
+
+/* Grid */
+.t-grid {
+    position: relative;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+    padding: 48px 40px;
+    max-width: 1200px;
+    margin: 0 auto
+}
+
+/* Card */
+.t-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-card);
+    ;
+    border-radius: 20px;
+    padding: 26px;
+    transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+    animation: tCardIn .5s cubic-bezier(.22, 1, .36, 1) both;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, .03)
+}
+
+.t-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--border-hover);
+    ;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, .08);
+    background: var(--bg-card)
+}
+
+@keyframes tCardIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+.t-card:nth-child(1) {
+    animation-delay: .05s
+}
+
+.t-card:nth-child(2) {
+    animation-delay: .12s
+}
+
+.t-card:nth-child(3) {
+    animation-delay: .18s
+}
+
+.t-card:nth-child(4) {
+    animation-delay: .24s
+}
+
+.t-card:nth-child(5) {
+    animation-delay: .30s
+}
+
+.t-card:nth-child(6) {
+    animation-delay: .36s
+}
+
+/* Card top */
+.t-card-top {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px
+}
+
+.t-avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 15px;
+    color: var(--text-on-dark);
+    ;
+    flex-shrink: 0;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, .1)
+}
+
+.t-name {
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -.01em;
+    color: var(--text-main)
+}
+
+.t-product {
+    font-size: 12px;
+    color: var(--text-muted-dark);
+    ;
+    margin-top: 2px
+}
+
+/* Stars */
+.t-stars {
+    display: flex;
+    gap: 2px;
+    margin-bottom: 12px
+}
+
+.t-star {
+    color: #F59E0B;
+    font-size: 14px
+}
+
+/* Quote */
+.t-quote {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text-sec);
+}
+
+/* Card bottom */
+.t-card-bottom {
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border-card);
+    ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.t-date {
+    font-size: 11px;
+    color: var(--text-placeholder)
+}
+
+.t-verified {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    color: #059669;
+    font-weight: 500
+}
+
+/* Footer */
+.t-footer {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 32px;
+    color: var(--text-placeholder);
+    font-size: 13px;
+    border-top: 1px solid var(--border-card);
+}
+
+/* ===== Cute animations ===== */
+/* Card wiggle on hover */
+.t-card:hover .t-avatar {
+    animation: avatarBounce .4s ease
+}
+
+@keyframes avatarBounce {
+
+    0%,
+    100% {
+        transform: scale(1)
+    }
+
+    50% {
+        transform: scale(1.1)
+    }
+}
+
+/* Stars twinkle */
+.t-star {
+    animation: starTwinkle 2s ease-in-out infinite;
+    animation-delay: calc(var(--i, 0) * .15s)
+}
+
+.t-stars .t-star:nth-child(1) {
+    --i: 0
+}
+
+.t-stars .t-star:nth-child(2) {
+    --i: 1
+}
+
+.t-stars .t-star:nth-child(3) {
+    --i: 2
+}
+
+.t-stars .t-star:nth-child(4) {
+    --i: 3
+}
+
+.t-stars .t-star:nth-child(5) {
+    --i: 4
+}
+
+@keyframes starTwinkle {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1)
+    }
+
+    50% {
+        opacity: .6;
+        transform: scale(.9)
+    }
+}
