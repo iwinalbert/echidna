@@ -976,13 +976,75 @@
         justify-content: center;
     }
 
-    /* --- Collage: hide on mobile --- */
+    /* --- Collage: show on mobile but smaller + clipped --- */
     .collage {
-        display: none !important;
+        display: block;
+        overflow: hidden;
     }
 
     .manga-card {
+        width: 70px;
+        border-radius: 8px;
+    }
+
+    /* Hide bottom-positioned cards that spill below the hero */
+    .card-5,
+    .card-6,
+    .card-11,
+    .card-12,
+    .card-13,
+    .card-14 {
         display: none !important;
+    }
+
+    /* Tighten left cards to the very edge */
+    .card-1 {
+        left: -10px;
+    }
+
+    .card-2 {
+        left: 8%;
+    }
+
+    .card-3 {
+        left: -8px;
+    }
+
+    .card-4 {
+        left: 2%;
+    }
+
+    .card-5 {
+        left: -10px;
+    }
+
+    .card-6 {
+        left: 6%;
+    }
+
+    /* Tighten right cards to the very edge */
+    .card-7 {
+        right: -10px;
+    }
+
+    .card-8 {
+        right: 6%;
+    }
+
+    .card-9 {
+        right: -8px;
+    }
+
+    .card-10 {
+        right: 2%;
+    }
+
+    .card-11 {
+        right: -10px;
+    }
+
+    .card-12 {
+        right: 6%;
     }
 
     /* --- Sections --- */
