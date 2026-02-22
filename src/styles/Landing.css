@@ -815,3 +815,197 @@
     border-top: 1px solid rgba(0, 0, 0, .06);
     margin-top: 20px;
 }
+
+/* ===== Hamburger Button (hidden on desktop) ===== */
+.nav-hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    flex-direction: column;
+    gap: 4px;
+    z-index: 110;
+}
+
+.hamburger-line {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--text-main);
+    border-radius: 2px;
+    transition: transform .25s ease, opacity .2s ease;
+}
+
+.hamburger-line.open:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.hamburger-line.open:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-line.open:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+/* ===================== Mobile ≤ 768px ===================== */
+@media (max-width: 768px) {
+
+    /* --- Navbar --- */
+    .navbar {
+        width: calc(100% - 32px);
+        top: 12px !important;
+        padding: 8px 12px 8px 14px;
+        border-radius: 16px;
+        flex-wrap: wrap;
+    }
+
+    .nav-hamburger {
+        display: flex;
+    }
+
+    .nav-right {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 4px;
+        padding-top: 8px;
+        border-top: 1px solid var(--border-card);
+        margin-top: 8px;
+    }
+
+    .nav-right.nav-right-open {
+        display: flex;
+    }
+
+    .nav-right .nav-btn {
+        width: 100%;
+        text-align: center;
+        border-radius: 10px;
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+
+    .nav-right .nav-theme-btn {
+        width: 34px !important;
+        align-self: center;
+    }
+
+    .nav-right .nav-cart-btn {
+        justify-content: center;
+        border-radius: 10px !important;
+    }
+
+    /* --- Hero --- */
+    .hero {
+        height: auto;
+        min-height: 85vh;
+        padding: 120px 20px 60px;
+    }
+
+    .hero-heading {
+        font-size: clamp(28px, 8vw, 42px);
+    }
+
+    .hero-sub {
+        font-size: 14px;
+        padding: 0 8px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* --- Collage: hide on mobile --- */
+    .collage {
+        display: none;
+    }
+
+    /* --- Sections --- */
+    .landing-section {
+        padding: 40px 16px 24px;
+    }
+
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    /* --- Bento Grid --- */
+    .bento-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 12px;
+    }
+
+    .bento-large {
+        grid-row: span 1;
+        padding: 24px;
+    }
+
+    .bento-card {
+        min-height: 120px;
+    }
+
+    .bento-title {
+        font-size: 20px;
+    }
+
+    .bento-large .bento-title {
+        font-size: 24px;
+    }
+
+    /* --- Featured Products --- */
+    .featured-products-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    /* --- Testimonials Preview --- */
+    .testimonials-preview-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    /* --- Footer --- */
+    .landing-footer {
+        padding: 24px 16px;
+    }
+
+    /* --- Wavy underline --- */
+    .wavy-svg {
+        width: 180px;
+        bottom: -10px;
+    }
+}
+
+/* ===================== Tablet 769–1024px ===================== */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .bento-large {
+        grid-row: span 1;
+    }
+
+    .landing-section {
+        padding: 50px 24px 32px;
+    }
+
+    .manga-card {
+        width: clamp(100px, 10vw, 160px);
+    }
+}

@@ -281,3 +281,82 @@
         transform: translateX(4px)
     }
 }
+
+/* ===== Dark Theme Support ===== */
+[data-theme='dark'] .modal-card {
+    background: var(--bg-card);
+    border-color: var(--border-card);
+    box-shadow: 0 -4px 40px rgba(0, 0, 0, .4);
+}
+
+[data-theme='dark'] .modal-card::before {
+    background: rgba(255, 255, 255, .12);
+}
+
+[data-theme='dark'] .modal-close {
+    background: var(--bg-card-alpha-05);
+    color: var(--text-sec);
+}
+
+[data-theme='dark'] .modal-close:hover {
+    background: var(--border-card);
+    color: var(--text-main);
+}
+
+[data-theme='dark'] .modal-product-tag {
+    color: var(--text-muted);
+}
+
+[data-theme='dark'] .modal-product-name {
+    color: var(--text-main);
+}
+
+[data-theme='dark'] .modal-product-price {
+    color: var(--text-muted);
+}
+
+[data-theme='dark'] .modal-section-label {
+    color: var(--text-muted);
+}
+
+[data-theme='dark'] .modal-size-btn {
+    background: var(--bg-card);
+    border-color: var(--border-card);
+    color: var(--text-sec);
+}
+
+[data-theme='dark'] .modal-size-btn:hover {
+    border-color: var(--text-main);
+    color: var(--text-main);
+}
+
+[data-theme='dark'] .modal-size-btn.selected {
+    background: var(--text-main);
+    border-color: var(--text-main);
+    color: var(--text-on-dark);
+}
+
+[data-theme='dark'] .modal-qty-btn {
+    border-color: var(--border-card);
+    background: var(--bg-card);
+    color: var(--text-main);
+}
+
+[data-theme='dark'] .modal-qty-btn:hover {
+    background: var(--bg-card-alpha-05);
+    border-color: var(--text-main);
+}
+
+[data-theme='dark'] .modal-qty-val {
+    color: var(--text-main);
+}
+
+[data-theme='dark'] .modal-add-btn {
+    background: var(--primary-btn-bg);
+    color: var(--primary-btn-text);
+}
+
+[data-theme='dark'] .modal-art {
+    background: var(--bg-card-alpha-05);
+    border-color: var(--border-card);
+}

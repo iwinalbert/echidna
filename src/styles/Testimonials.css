@@ -344,3 +344,35 @@
         transform: scale(.9)
     }
 }
+
+/* ===================== Mobile ≤ 768px ===================== */
+@media (max-width: 768px) {
+
+    /* --- Header --- */
+    .t-header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px 16px;
+        text-align: center;
+    }
+
+    .t-header-right {
+        display: none;
+    }
+
+    .t-back-btn {
+        align-self: flex-start;
+    }
+
+    /* --- Grid --- */
+    .t-grid {
+        grid-template-columns: 1fr;
+        padding: 24px 16px;
+        gap: 14px;
+    }
+
+    /* --- Footer --- */
+    .t-footer {
+        padding: 24px 16px;
+    }
+}
