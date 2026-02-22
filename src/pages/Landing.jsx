@@ -29,7 +29,7 @@ const Landing = () => {
                         Print Studio
                         <svg className="wavy-svg" viewBox="0 0 310 16" fill="none">
                             <path id="wavyPath" d="M2 7C40 7 40 14 80 14C120 14 120 2 160 2C200 2 200 12 240 12C275 12 310 5 310 5"
-                                stroke="#111" strokeWidth="3" strokeLinecap="round" />
+                                stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
                         </svg>
                     </span>
                 </h1>

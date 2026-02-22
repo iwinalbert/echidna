@@ -24,7 +24,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className={`navbar${menuOpen ? ' menu-open' : ''}`} style={{ position: 'fixed', top: '24px', left: '50%', transform: 'translateX(-50%)', zIndex: 1000 }}>
+        <nav className={`navbar${menuOpen ? ' menu-open' : ''}`}>
             <div className="nav-left">
                 <Link to="/" className="nav-link nav-brand">
                     Echidna.in
@@ -46,7 +46,7 @@ const Navbar = () => {
                 <Link to="/" className="nav-btn" onClick={() => setMenuOpen(false)}>Home</Link>
                 <Link to="/products" className="nav-btn" onClick={() => setMenuOpen(false)}>Products</Link>
                 <Link to="/customize/1" className="nav-btn" onClick={() => setMenuOpen(false)}>Custom Orders</Link>
-                <button onClick={toggleTheme} className="nav-btn nav-theme-btn" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '34px', height: '34px', padding: 0, borderRadius: '50%' }}>
+                <button onClick={toggleTheme} className="nav-btn nav-theme-btn">
                     {theme === 'light' ? (
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
@@ -65,7 +65,7 @@ const Navbar = () => {
                         </svg>
                     )}
                 </button>
-                <Link to="/checkout" className="nav-btn nav-cart-btn" onClick={() => setMenuOpen(false)} style={{ display: 'flex', alignItems: 'center', gap: '6px', background: 'var(--text-main)', color: 'var(--bg-card)', borderColor: 'var(--text-main)' }}>
+                <Link to="/checkout" className="nav-btn nav-cart-btn" onClick={() => setMenuOpen(false)}>
                     <svg width="14" height="14" viewBox="0 0 18 18" fill="none">
                         <path d="M1 1h2.5l1.8 9h9l1.7-6H5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
                         <circle cx="8" cy="15.5" r="1.2" fill="currentColor" />
